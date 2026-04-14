@@ -12,7 +12,7 @@ void add(ll x,ll k){
 }
 ll sum(ll k){
     ll ret=0;
-    for(ll i=k;i;i-=lowbit(i))
+    for(ll i=k;i>0;i-=lowbit(i))
         ret+=bit[i];
     return ret;
 }
